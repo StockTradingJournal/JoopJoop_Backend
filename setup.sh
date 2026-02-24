@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo "🚀 ForSale 서버 환경 설정을 시작합니다..."
+
+# 가상환경이 이미 있는지 확인
+if [ -d "venv" ]; then
+    echo "⚠️  기존 가상환경이 발견되었습니다. 삭제하고 새로 생성합니다."
+    rm -rf venv
+fi
+
+# 가상환경 생성
+echo "📦 가상환경을 생성합니다..."
+python3 -m venv venv
+
+# 가상환경 활성화
+echo "🔧 가상환경을 활성화합니다..."
+source venv/bin/activate
+
+# pip 업그레이드
+echo "⬆️  pip을 업그레이드합니다..."
+pip install --upgrade pip
+
+# 의존성 설치
+echo "📚 의존성 패키지를 설치합니다..."
+pip install -r requirements.txt
+
+echo "✅ 설정이 완료되었습니다!"
+echo ""
+echo "서버를 실행하려면 다음 명령어를 사용하세요:"
+echo "  ./start.sh"
+echo ""
+echo "또는 수동으로 실행하려면:"
+echo "  source venv/bin/activate"
+echo "  uvicorn main:socket_app --reload --host 0.0.0.0 --port 8000"

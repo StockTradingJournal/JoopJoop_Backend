@@ -1,0 +1,1235 @@
+INFO:     Will watch for changes in these directories: ['/Users/seogyeong-won/Desktop/forsale/forsale_backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [93832] using StatReload
+INFO:     Started server process [93847]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:54065 - "GET /socket.io/?EIO=4&transport=polling&t=l4bq5pj5 HTTP/1.1" 200 OK
+Client connected: vrDbySWY-4VP9OIcAAAB
+INFO:     127.0.0.1:54065 - "POST /socket.io/?EIO=4&transport=polling&t=l4bq93aj&sid=CIBVIZuxn2IBXbb4AAAA HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54067) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=CIBVIZuxn2IBXbb4AAAA" [accepted]
+INFO:     127.0.0.1:54069 - "GET /socket.io/?EIO=4&transport=polling&t=l4bqat8m&sid=CIBVIZuxn2IBXbb4AAAA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54069 - "GET /socket.io/?EIO=4&transport=polling&t=l4bqk7o7&sid=CIBVIZuxn2IBXbb4AAAA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54069 - "GET /socket.io/?EIO=4&transport=polling&t=l4cfmexy HTTP/1.1" 200 OK
+Client connected: rXlGGZFqoj17Di78AAAD
+INFO:     127.0.0.1:54069 - "POST /socket.io/?EIO=4&transport=polling&t=l4cfrtir&sid=ykUR22-zGavQwTQoAAAC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54065 - "GET /socket.io/?EIO=4&transport=polling&t=l4cfrz2g&sid=ykUR22-zGavQwTQoAAAC HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54071) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=ykUR22-zGavQwTQoAAAC" [accepted]
+INFO:     127.0.0.1:54065 - "GET /socket.io/?EIO=4&transport=polling&t=l4cft4ji&sid=ykUR22-zGavQwTQoAAAC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54065 - "GET /socket.io/?EIO=4&transport=polling&t=l4cfu4ky&sid=ykUR22-zGavQwTQoAAAC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54065 - "GET /socket.io/?EIO=4&transport=polling&t=l4dcdkfr HTTP/1.1" 200 OK
+Client connected: 3juIX6SpFkClZNhnAAAF
+INFO:     127.0.0.1:54065 - "POST /socket.io/?EIO=4&transport=polling&t=l4dcidd0&sid=ZuO31coyqeADyPjTAAAE HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54069 - "GET /socket.io/?EIO=4&transport=polling&t=l4dcj2as&sid=ZuO31coyqeADyPjTAAAE HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54073) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=ZuO31coyqeADyPjTAAAE" [accepted]
+INFO:     127.0.0.1:54069 - "GET /socket.io/?EIO=4&transport=polling&t=l4dcmapr&sid=ZuO31coyqeADyPjTAAAE HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54069 - "GET /socket.io/?EIO=4&transport=polling&t=l4dcp062&sid=ZuO31coyqeADyPjTAAAE HTTP/1.1" 200 OK
+Client disconnected: rXlGGZFqoj17Di78AAAD
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9mi4wfq HTTP/1.1" 200 OK
+Client connected: MDV_ORdjn7Q-9CGpAAAH
+INFO:     127.0.0.1:54139 - "POST /socket.io/?EIO=4&transport=polling&t=l9mimj2c&sid=I_7PrKDlJ8o3MoeNAAAG HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9mimxt0&sid=I_7PrKDlJ8o3MoeNAAAG HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54143) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=I_7PrKDlJ8o3MoeNAAAG" [accepted]
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9miow6c&sid=I_7PrKDlJ8o3MoeNAAAG HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9mipwi4&sid=I_7PrKDlJ8o3MoeNAAAG HTTP/1.1" 200 OK
+Client disconnected: vrDbySWY-4VP9OIcAAAB
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9o6pbyz HTTP/1.1" 200 OK
+Client connected: Eptj4HaRAFDdIPwBAAAJ
+INFO:     127.0.0.1:54139 - "POST /socket.io/?EIO=4&transport=polling&t=l9o74v2m&sid=U4LB13OA_UWTN640AAAI HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54142 - "GET /socket.io/?EIO=4&transport=polling&t=l9o75a34&sid=U4LB13OA_UWTN640AAAI HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54147) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=U4LB13OA_UWTN640AAAI" [accepted]
+INFO:     127.0.0.1:54142 - "GET /socket.io/?EIO=4&transport=polling&t=l9o77ce3&sid=U4LB13OA_UWTN640AAAI HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54142 - "GET /socket.io/?EIO=4&transport=polling&t=l9o79nne&sid=U4LB13OA_UWTN640AAAI HTTP/1.1" 200 OK
+Client disconnected: 3juIX6SpFkClZNhnAAAF
+INFO:     127.0.0.1:54142 - "GET /socket.io/?EIO=4&transport=polling&t=l9q5f4d3 HTTP/1.1" 200 OK
+Client connected: 1oNOapADas8iX_JfAAAL
+INFO:     127.0.0.1:54142 - "POST /socket.io/?EIO=4&transport=polling&t=l9q5sjzw&sid=Fee2_yEdj2mL2InQAAAK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9q5sx9r&sid=Fee2_yEdj2mL2InQAAAK HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 54151) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=Fee2_yEdj2mL2InQAAAK" [accepted]
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9q5u7dv&sid=Fee2_yEdj2mL2InQAAAK HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54139 - "GET /socket.io/?EIO=4&transport=polling&t=l9q5w2rf&sid=Fee2_yEdj2mL2InQAAAK HTTP/1.1" 200 OK
+Client 1oNOapADas8iX_JfAAAL, data {'roomId': 'U5A9JZ', 'nickname': 'a2'} attempting to join room
+Client 1oNOapADas8iX_JfAAAL, success True
+join done
+Client Eptj4HaRAFDdIPwBAAAJ, data {'roomId': 'U5A9JZ', 'nickname': 'a3'} attempting to join room
+Client Eptj4HaRAFDdIPwBAAAJ, success True
+join done
+▶️ Starting Phase 1 round 1
+🔀 Initial turn order: ['a2', 'a1', 'a3']
+🏠 Dealt properties: [3, 15, 27]
+📦 Properties remaining in deck: 27
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 3, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 15, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 27, paid 1000
+🏁 Phase 1 round 1 ended
+📦 Properties remaining in deck: 27, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 2
+▶️ Starting Phase 1 round 2
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [4, 10, 20]
+📦 Properties remaining in deck: 24
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 4, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 10, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 20, paid 1000
+🏁 Phase 1 round 2 ended
+📦 Properties remaining in deck: 24, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 3
+▶️ Starting Phase 1 round 3
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [12, 19, 24]
+📦 Properties remaining in deck: 21
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 12, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 19, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 24, paid 1000
+🏁 Phase 1 round 3 ended
+📦 Properties remaining in deck: 21, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 4
+▶️ Starting Phase 1 round 4
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [9, 21, 28]
+📦 Properties remaining in deck: 18
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 9, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 21, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 28, paid 1000
+🏁 Phase 1 round 4 ended
+📦 Properties remaining in deck: 18, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 5
+▶️ Starting Phase 1 round 5
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [7, 13, 22]
+📦 Properties remaining in deck: 15
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 7, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 13, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 22, paid 1000
+🏁 Phase 1 round 5 ended
+📦 Properties remaining in deck: 15, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 6
+▶️ Starting Phase 1 round 6
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [6, 17, 29]
+📦 Properties remaining in deck: 12
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 6, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 17, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 29, paid 1000
+🏁 Phase 1 round 6 ended
+📦 Properties remaining in deck: 12, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 7
+▶️ Starting Phase 1 round 7
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [8, 11, 30]
+📦 Properties remaining in deck: 9
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 8, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 11, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 30, paid 1000
+🏁 Phase 1 round 7 ended
+📦 Properties remaining in deck: 9, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 8
+▶️ Starting Phase 1 round 8
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [5, 14, 23]
+📦 Properties remaining in deck: 6
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 5, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 14, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 23, paid 1000
+🏁 Phase 1 round 8 ended
+📦 Properties remaining in deck: 6, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 9
+▶️ Starting Phase 1 round 9
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [16, 18, 25]
+📦 Properties remaining in deck: 3
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 16, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 18, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 25, paid 1000
+🏁 Phase 1 round 9 ended
+📦 Properties remaining in deck: 3, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 10
+▶️ Starting Phase 1 round 10
+🔀 Reordered turn order (winner starts): ['a2', 'a1', 'a3']
+🏠 Dealt properties: [1, 2, 26]
+📦 Properties remaining in deck: 0
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for a2
+💰 a2 bid 1000
+📊 Active players remaining: 3/3
+  - a1: has_passed=False, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a1 (has_passed=False)
+✅ Next turn: a1
+🚫 a1 passed. Got property 1, paid penalty 0
+📊 Active players remaining: 2/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking a3 (has_passed=False)
+✅ Next turn: a3
+🚫 a3 passed. Got property 2, paid penalty 0
+📊 Active players remaining: 1/3
+  - a1: has_passed=True, current_bid=0
+  - a2: has_passed=False, current_bid=1000
+  - a3: has_passed=True, current_bid=0
+🏆 a2 wins the round! Got property 26, paid 1000
+🏁 Phase 1 round 10 ended
+📦 Properties remaining in deck: 0, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+🎯 Moving to Phase 2 (not enough properties left)
+Client disconnected: MDV_ORdjn7Q-9CGpAAAH
+INFO:     127.0.0.1:61587 - "GET /socket.io/?EIO=4&transport=polling&t=mf602fbi HTTP/1.1" 200 OK
+Client connected: dZdQPFjDTV4d-voCAAAN
+INFO:     127.0.0.1:61587 - "POST /socket.io/?EIO=4&transport=polling&t=mf60i2b5&sid=dVWsB2P9vjtppR1WAAAM HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 61590) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=dVWsB2P9vjtppR1WAAAM" [accepted]
+INFO:     127.0.0.1:61591 - "GET /socket.io/?EIO=4&transport=polling&t=mf60ju40&sid=dVWsB2P9vjtppR1WAAAM HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61591 - "GET /socket.io/?EIO=4&transport=polling&t=mf60mf21&sid=dVWsB2P9vjtppR1WAAAM HTTP/1.1" 200 OK
+Client 1oNOapADas8iX_JfAAAL, data {'roomId': 'VO43G5', 'nickname': 'ㅁ2'} attempting to join room
+Client 1oNOapADas8iX_JfAAAL, success True
+join done
+Client Eptj4HaRAFDdIPwBAAAJ, data {'roomId': 'VO43G5', 'nickname': 'ㅁ3'} attempting to join room
+Client Eptj4HaRAFDdIPwBAAAJ, success True
+join done
+▶️ Starting Phase 1 round 1
+🔀 Initial turn order: ['ㅁ2', 'ㅁ1', 'ㅁ3']
+🏠 Dealt properties: [8, 24, 29]
+📦 Properties remaining in deck: 27
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ2
+💰 ㅁ2 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=1000
+  - ㅁ3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+💰 ㅁ1 bid 2000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=2000
+  - ㅁ2: has_passed=False, current_bid=1000
+  - ㅁ3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking ㅁ3 (has_passed=False)
+✅ Next turn: ㅁ3
+💰 ㅁ3 bid 3000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=2000
+  - ㅁ2: has_passed=False, current_bid=1000
+  - ㅁ3: has_passed=False, current_bid=3000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+💰 ㅁ2 bid 4000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=2000
+  - ㅁ2: has_passed=False, current_bid=4000
+  - ㅁ3: has_passed=False, current_bid=3000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+💰 ㅁ1 bid 5000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=5000
+  - ㅁ2: has_passed=False, current_bid=4000
+  - ㅁ3: has_passed=False, current_bid=3000
+🔄 Looking for next active player...
+  Checking ㅁ3 (has_passed=False)
+✅ Next turn: ㅁ3
+💰 ㅁ3 bid 6000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=5000
+  - ㅁ2: has_passed=False, current_bid=4000
+  - ㅁ3: has_passed=False, current_bid=6000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 8, paid penalty 2000
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=5000
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=6000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 24, paid penalty 3000
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=6000
+🏆 ㅁ3 wins the round! Got property 29, paid 6000
+🏁 Phase 1 round 1 ended
+📦 Properties remaining in deck: 27, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 2
+▶️ Starting Phase 1 round 2
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [1, 14, 20]
+📦 Properties remaining in deck: 24
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 1, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 14, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 20, paid 1000
+🏁 Phase 1 round 2 ended
+📦 Properties remaining in deck: 24, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 3
+▶️ Starting Phase 1 round 3
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [2, 10, 16]
+📦 Properties remaining in deck: 21
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 2, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 10, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 16, paid 1000
+🏁 Phase 1 round 3 ended
+📦 Properties remaining in deck: 21, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 4
+▶️ Starting Phase 1 round 4
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [6, 26, 27]
+📦 Properties remaining in deck: 18
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 6, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 26, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 27, paid 1000
+🏁 Phase 1 round 4 ended
+📦 Properties remaining in deck: 18, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 5
+▶️ Starting Phase 1 round 5
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [5, 9, 15]
+📦 Properties remaining in deck: 15
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 5, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 9, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 15, paid 1000
+🏁 Phase 1 round 5 ended
+📦 Properties remaining in deck: 15, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 6
+▶️ Starting Phase 1 round 6
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [4, 23, 28]
+📦 Properties remaining in deck: 12
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 4, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 23, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 28, paid 1000
+🏁 Phase 1 round 6 ended
+📦 Properties remaining in deck: 12, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 7
+▶️ Starting Phase 1 round 7
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [3, 17, 22]
+📦 Properties remaining in deck: 9
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 3, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 17, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 22, paid 1000
+🏁 Phase 1 round 7 ended
+📦 Properties remaining in deck: 9, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 8
+▶️ Starting Phase 1 round 8
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [7, 12, 18]
+📦 Properties remaining in deck: 6
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 7, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 12, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 18, paid 1000
+🏁 Phase 1 round 8 ended
+📦 Properties remaining in deck: 6, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 9
+▶️ Starting Phase 1 round 9
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [11, 21, 25]
+📦 Properties remaining in deck: 3
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 11, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 21, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 25, paid 1000
+🏁 Phase 1 round 9 ended
+📦 Properties remaining in deck: 3, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 10
+▶️ Starting Phase 1 round 10
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [13, 19, 30]
+📦 Properties remaining in deck: 0
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 13, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 19, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 30, paid 1000
+🏁 Phase 1 round 10 ended
+📦 Properties remaining in deck: 0, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+🎯 Moving to Phase 2 (not enough properties left)
+Client disconnected: Eptj4HaRAFDdIPwBAAAJ
+INFO:     127.0.0.1:61842 - "GET /socket.io/?EIO=4&transport=polling&t=mrjp67wm HTTP/1.1" 200 OK
+Client connected: w-gAmqN2c-aYLlxfAAAP
+INFO:     127.0.0.1:61842 - "POST /socket.io/?EIO=4&transport=polling&t=mrjpcebb&sid=wgpmLN2sgjdBo4HHAAAO HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61845 - "GET /socket.io/?EIO=4&transport=polling&t=mrjpct0d&sid=wgpmLN2sgjdBo4HHAAAO HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 61846) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=wgpmLN2sgjdBo4HHAAAO" [accepted]
+INFO:     127.0.0.1:61845 - "GET /socket.io/?EIO=4&transport=polling&t=mrjq3vse&sid=wgpmLN2sgjdBo4HHAAAO HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61845 - "GET /socket.io/?EIO=4&transport=polling&t=mrjq4uhx&sid=wgpmLN2sgjdBo4HHAAAO HTTP/1.1" 200 OK
+Client disconnected: dZdQPFjDTV4d-voCAAAN
+INFO:     127.0.0.1:61845 - "GET /socket.io/?EIO=4&transport=polling&t=mrksln3j HTTP/1.1" 200 OK
+Client connected: kfsYIEVw8wP1HVBCAAAR
+INFO:     127.0.0.1:61845 - "POST /socket.io/?EIO=4&transport=polling&t=mrktcccz&sid=yS8cTrhtNvmJJxm_AAAQ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61842 - "GET /socket.io/?EIO=4&transport=polling&t=mrktdvc3&sid=yS8cTrhtNvmJJxm_AAAQ HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 61850) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=yS8cTrhtNvmJJxm_AAAQ" [accepted]
+INFO:     127.0.0.1:61842 - "GET /socket.io/?EIO=4&transport=polling&t=mrktfeiz&sid=yS8cTrhtNvmJJxm_AAAQ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61842 - "GET /socket.io/?EIO=4&transport=polling&t=mrkthxkj&sid=yS8cTrhtNvmJJxm_AAAQ HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'game_manager.py'. Reloading...
+INFO:     Shutting down
+disconnect async handler error
+Traceback (most recent call last):
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/engineio/async_server.py", line 509, in run_async_handler
+    return await self.handlers[event](*args)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+TypeError: AsyncServer._handle_eio_disconnect() takes 2 positional arguments but 3 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/engineio/async_server.py", line 515, in run_async_handler
+    return await self.handlers[event](args[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/socketio/async_server.py", line 687, in _handle_eio_disconnect
+    await self._handle_disconnect(eio_sid, n)
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/socketio/async_server.py", line 575, in _handle_disconnect
+    await self._trigger_event('disconnect', namespace, sid)
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/socketio/async_server.py", line 631, in _trigger_event
+    ret = await handler(*args)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/main.py", line 43, in disconnect
+    await game_manager.handle_disconnect(sid, sio)
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/game_manager.py", line 583, in handle_disconnect
+    del self.rooms[room_id]
+        ~~~~~~~~~~^^^^^^^^^
+KeyError: '215KB2'
+disconnect async handler error
+Traceback (most recent call last):
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/engineio/async_server.py", line 509, in run_async_handler
+    return await self.handlers[event](*args)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+TypeError: AsyncServer._handle_eio_disconnect() takes 2 positional arguments but 3 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/engineio/async_server.py", line 515, in run_async_handler
+    return await self.handlers[event](args[0])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/socketio/async_server.py", line 687, in _handle_eio_disconnect
+    await self._handle_disconnect(eio_sid, n)
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/socketio/async_server.py", line 575, in _handle_disconnect
+    await self._trigger_event('disconnect', namespace, sid)
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/venv/lib/python3.14/site-packages/socketio/async_server.py", line 631, in _trigger_event
+    ret = await handler(*args)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/main.py", line 43, in disconnect
+    await game_manager.handle_disconnect(sid, sio)
+  File "/Users/seogyeong-won/Desktop/forsale/forsale_backend/game_manager.py", line 583, in handle_disconnect
+    del self.rooms[room_id]
+        ~~~~~~~~~~^^^^^^^^^
+KeyError: '215KB2'
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [93847]
+Client 1oNOapADas8iX_JfAAAL, data {'roomId': '215KB2', 'nickname': 'ㅁ2'} attempting to join room
+Client 1oNOapADas8iX_JfAAAL, success True
+join done
+Client w-gAmqN2c-aYLlxfAAAP, data {'roomId': '215KB2', 'nickname': 'ㅁ3'} attempting to join room
+Client w-gAmqN2c-aYLlxfAAAP, success True
+join done
+▶️ Starting Phase 1 round 1
+🔀 Initial turn order: ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [20, 25, 29]
+📦 Properties remaining in deck: 27
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+💰 ㅁ2 bid 2000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=2000
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 20, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=2000
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ3 (has_passed=False)
+✅ Next turn: ㅁ3
+🚫 ㅁ3 passed. Got property 25, paid penalty 1000
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=2000
+  - ㅁ3: has_passed=True, current_bid=0
+🏆 ㅁ2 wins the round! Got property 29, paid 2000
+🏁 Phase 1 round 1 ended
+📦 Properties remaining in deck: 27, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 2
+▶️ Starting Phase 1 round 2
+🔀 Reordered turn order (winner starts): ['ㅁ2', 'ㅁ1', 'ㅁ3']
+🏠 Dealt properties: [16, 17, 28]
+📦 Properties remaining in deck: 24
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ2
+💰 ㅁ2 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=1000
+  - ㅁ3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 16, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=1000
+  - ㅁ3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking ㅁ3 (has_passed=False)
+✅ Next turn: ㅁ3
+🚫 ㅁ3 passed. Got property 17, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=1000
+  - ㅁ3: has_passed=True, current_bid=0
+🏆 ㅁ2 wins the round! Got property 28, paid 1000
+🏁 Phase 1 round 2 ended
+📦 Properties remaining in deck: 24, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 3
+▶️ Starting Phase 1 round 3
+🔀 Reordered turn order (winner starts): ['ㅁ2', 'ㅁ1', 'ㅁ3']
+🏠 Dealt properties: [19, 21, 27]
+📦 Properties remaining in deck: 21
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ2
+🚫 ㅁ2 passed. Got property 19, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=0
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 21, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=0
+🏆 ㅁ3 wins the round! Got property 27, paid 0
+🏁 Phase 1 round 3 ended
+📦 Properties remaining in deck: 21, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 4
+▶️ Starting Phase 1 round 4
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [5, 12, 23]
+📦 Properties remaining in deck: 18
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 5, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 12, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 23, paid 1000
+🏁 Phase 1 round 4 ended
+📦 Properties remaining in deck: 18, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 5
+▶️ Starting Phase 1 round 5
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [1, 7, 13]
+📦 Properties remaining in deck: 15
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 1, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 7, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 13, paid 1000
+🏁 Phase 1 round 5 ended
+📦 Properties remaining in deck: 15, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 6
+▶️ Starting Phase 1 round 6
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [10, 18, 24]
+📦 Properties remaining in deck: 12
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 10, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 18, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 24, paid 1000
+🏁 Phase 1 round 6 ended
+📦 Properties remaining in deck: 12, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 7
+▶️ Starting Phase 1 round 7
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [6, 8, 30]
+📦 Properties remaining in deck: 9
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 6, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 8, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 30, paid 1000
+🏁 Phase 1 round 7 ended
+📦 Properties remaining in deck: 9, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 8
+▶️ Starting Phase 1 round 8
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [4, 9, 22]
+📦 Properties remaining in deck: 6
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 4, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 9, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 22, paid 1000
+🏁 Phase 1 round 8 ended
+📦 Properties remaining in deck: 6, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 9
+▶️ Starting Phase 1 round 9
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [2, 11, 26]
+📦 Properties remaining in deck: 3
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 2, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 11, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 26, paid 1000
+🏁 Phase 1 round 9 ended
+📦 Properties remaining in deck: 3, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+▶️ Starting Phase 1 round 10
+▶️ Starting Phase 1 round 10
+🔀 Reordered turn order (winner starts): ['ㅁ3', 'ㅁ2', 'ㅁ1']
+🏠 Dealt properties: [3, 14, 15]
+📦 Properties remaining in deck: 0
+✅ Reset all players: has_passed=False, current_bid=0
+⏰ Starting turn timer for ㅁ3
+💰 ㅁ3 bid 1000
+📊 Active players remaining: 3/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=False, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ2 (has_passed=False)
+✅ Next turn: ㅁ2
+🚫 ㅁ2 passed. Got property 3, paid penalty 0
+📊 Active players remaining: 2/3
+  - ㅁ1: has_passed=False, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🔄 Looking for next active player...
+  Checking ㅁ1 (has_passed=False)
+✅ Next turn: ㅁ1
+🚫 ㅁ1 passed. Got property 14, paid penalty 0
+📊 Active players remaining: 1/3
+  - ㅁ1: has_passed=True, current_bid=0
+  - ㅁ2: has_passed=True, current_bid=0
+  - ㅁ3: has_passed=False, current_bid=1000
+🏆 ㅁ3 wins the round! Got property 15, paid 1000
+🏁 Phase 1 round 10 ended
+📦 Properties remaining in deck: 0, Players: 3
+⏳ Waiting 2 seconds before starting next round...
+🎯 Moving to Phase 2 (not enough properties left)
+Client disconnected: kfsYIEVw8wP1HVBCAAAR
+Client disconnected: 1oNOapADas8iX_JfAAAL
+Client disconnected: w-gAmqN2c-aYLlxfAAAP
+INFO:     Started server process [51864]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62426 - "GET /socket.io/?EIO=4&transport=polling&t=nm3w4zip HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62427 - "GET /socket.io/?EIO=4&transport=polling&t=nm3w5cc7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62429 - "GET /socket.io/?EIO=4&transport=polling&t=nm3w56kg HTTP/1.1" 200 OK
+Client connected: xL2_2yCWku5B8nF2AAAD
+INFO:     127.0.0.1:62429 - "POST /socket.io/?EIO=4&transport=polling&t=nm3wde03&sid=N-5EtDm524vcOxQEAAAA HTTP/1.1" 200 OK
+Client connected: xXO3NeRw3mg7D7y2AAAE
+INFO:     127.0.0.1:62427 - "POST /socket.io/?EIO=4&transport=polling&t=nm3wdk7q&sid=leQnkt4OnKv6MuqtAAAB HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62426 - "GET /socket.io/?EIO=4&transport=polling&t=nm3wdbj1&sid=N-5EtDm524vcOxQEAAAA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62429 - "GET /socket.io/?EIO=4&transport=polling&t=nm3wdjnf&sid=leQnkt4OnKv6MuqtAAAB HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 62431) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=N-5EtDm524vcOxQEAAAA" [accepted]
+Client connected: XJDPsHfWfc1fXhd5AAAF
+INFO:     127.0.0.1:62434 - "POST /socket.io/?EIO=4&transport=polling&t=nm3wdq8k&sid=qKv7TxygXvc3XuDpAAAC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62435 - "GET /socket.io/?EIO=4&transport=polling&t=nm3we04t&sid=qKv7TxygXvc3XuDpAAAC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62429 - "GET /socket.io/?EIO=4&transport=polling&t=nm3wip4j&sid=N-5EtDm524vcOxQEAAAA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62435 - "GET /socket.io/?EIO=4&transport=polling&t=nm3wm35o&sid=N-5EtDm524vcOxQEAAAA HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 62439) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=leQnkt4OnKv6MuqtAAAB" [accepted]
+INFO:     127.0.0.1:62426 - "GET /socket.io/?EIO=4&transport=polling&t=nm3wimij&sid=leQnkt4OnKv6MuqtAAAB HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 62441) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=qKv7TxygXvc3XuDpAAAC" [accepted]
+INFO:     127.0.0.1:62429 - "GET /socket.io/?EIO=4&transport=polling&t=nm3wlv26&sid=qKv7TxygXvc3XuDpAAAC HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51864]
+Client disconnected: xL2_2yCWku5B8nF2AAAD
+Client disconnected: XJDPsHfWfc1fXhd5AAAF
+Client disconnected: xXO3NeRw3mg7D7y2AAAE
+INFO:     Started server process [54353]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62499 - "GET /socket.io/?EIO=4&transport=polling&t=npn7gcij HTTP/1.1" 200 OK
+Client connected: ikW0uc00pzDZ89EhAAAB
+INFO:     127.0.0.1:62499 - "POST /socket.io/?EIO=4&transport=polling&t=npn7kfo9&sid=dXU1ZhuJBvGuw2YkAAAA HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 62502) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=dXU1ZhuJBvGuw2YkAAAA" [accepted]
+INFO:     127.0.0.1:62503 - "GET /socket.io/?EIO=4&transport=polling&t=npn7ldtt&sid=dXU1ZhuJBvGuw2YkAAAA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62503 - "GET /socket.io/?EIO=4&transport=polling&t=npn7ugwy&sid=dXU1ZhuJBvGuw2YkAAAA HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62503 - "GET /socket.io/?EIO=4&transport=polling&t=npnz8qb6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62499 - "GET /socket.io/?EIO=4&transport=polling&t=npnz8l0m HTTP/1.1" 200 OK
+Client connected: nBFnQZ-zhF5K5oKPAAAE
+INFO:     127.0.0.1:62499 - "POST /socket.io/?EIO=4&transport=polling&t=npnzbpz4&sid=4qgPawyrkDnllioGAAAC HTTP/1.1" 200 OK
+Client connected: ltDWxOHxsE93_uixAAAF
+INFO:     127.0.0.1:62503 - "POST /socket.io/?EIO=4&transport=polling&t=npnzdf3l&sid=jkoGwwSX_m6xaeRGAAAD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62499 - "GET /socket.io/?EIO=4&transport=polling&t=npnzc9zz&sid=4qgPawyrkDnllioGAAAC HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 62505) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=4qgPawyrkDnllioGAAAC" [accepted]
+INFO:     127.0.0.1:62508 - "GET /socket.io/?EIO=4&transport=polling&t=npnzee8m&sid=jkoGwwSX_m6xaeRGAAAD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62499 - "GET /socket.io/?EIO=4&transport=polling&t=npnzg8ve&sid=4qgPawyrkDnllioGAAAC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62499 - "GET /socket.io/?EIO=4&transport=polling&t=npnzhzk1&sid=4qgPawyrkDnllioGAAAC HTTP/1.1" 200 OK
+INFO:     ('127.0.0.1', 62511) - "WebSocket /socket.io/?EIO=4&transport=websocket&sid=jkoGwwSX_m6xaeRGAAAD" [accepted]
+INFO:     127.0.0.1:62508 - "GET /socket.io/?EIO=4&transport=polling&t=npnzhohr&sid=jkoGwwSX_m6xaeRGAAAD HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'game_manager.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [54353]
+Client disconnected: ikW0uc00pzDZ89EhAAAB
+Client disconnected: ltDWxOHxsE93_uixAAAF
+Client disconnected: nBFnQZ-zhF5K5oKPAAAE
+INFO:     Started server process [70387]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'game_manager.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [70387]
+INFO:     Started server process [70602]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'game_manager.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [70602]
+INFO:     Started server process [71831]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [71831]
+INFO:     Stopping reloader process [93832]
