@@ -70,7 +70,7 @@ class Room:
         self.last_round_winner_sid: Optional[str] = None  # who won highest card last round
 
         # Phase 2 separate timeout
-        self.phase2_timeout = 30          # seconds for Phase 2 card selection
+        self.phase2_timeout = 10          # seconds for Phase 2 card selection
         self.phase2_resolving = False     # guard against double-resolve
 
         # Add creator
