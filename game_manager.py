@@ -19,6 +19,7 @@ class Player:
         self.sid = sid
         self.nickname = nickname
         self.ready = False
+        self.is_bot = False
         self.coins = 15000              # starting funds
         self.properties: List[int] = []        # job cards won in Phase 1
         self.real_estate_cards: List[int] = [] # real estate cards won in Phase 2
@@ -73,6 +74,12 @@ class Room:
         self.phase2_timeout = 10          # seconds for Phase 2 card selection
         self.phase2_resolving = False     # guard against double-resolve
 
+        # Last pass event (cleared after each broadcast)
+        self._last_pass_event: Optional[Dict] = None
+
+        # Round result (cleared after each broadcast)
+        self._round_result: Optional[Dict] = None
+
         # Add creator
         creator = Player(creator_sid, creator_nickname)
         self.players[creator_sid] = creator
@@ -105,6 +112,30 @@ class GameManager:
         room = Room(room_id, sid, nickname)
         self.rooms[room_id] = room
         self.player_to_room[sid] = room_id
+        return room_id
+
+    async def add_bot_to_room(self, host_sid: str) -> Optional[str]:
+        """Add a bot player to the room. Host only, lobby only, max 6 players."""
+        room_id = self.player_to_room.get(host_sid)
+        if not room_id or room_id not in self.rooms:
+            return None
+        room = self.rooms[room_id]
+        if room.phase != GamePhase.LOBBY:
+            return None
+        first_player_sid = next(iter(room.players.keys()))
+        if host_sid != first_player_sid:
+            return None
+        if len(room.players) >= 6:
+            return None
+        bot_num = sum(1 for p in room.players.values() if p.is_bot) + 1
+        bot_sid = f"bot_{room_id}_{bot_num}"
+        bot_nickname = f"봇{bot_num}"
+        bot = Player(bot_sid, bot_nickname)
+        bot.is_bot = True
+        bot.ready = True
+        room.players[bot_sid] = bot
+        self.player_to_room[bot_sid] = room_id
+        print(f"🤖 Bot {bot_nickname} ({bot_sid}) added to room {room_id}")
         return room_id
 
     async def join_room(self, sid: str, room_id: str, nickname: str) -> bool:
@@ -146,6 +177,8 @@ class GameManager:
         room.phase = GamePhase.ITEM_SELECTION
         room.item_selection_count = 0
         print(f"🎮 Game started in room {room_id}, moving to item selection")
+        # Schedule bot item selections after a short delay
+        asyncio.create_task(self._trigger_bot_item_selections(room))
         return room_id
 
     # ─────────────────────────────────────────────────────────
@@ -211,16 +244,15 @@ class GameManager:
         await self._check_auto_pass_and_start_timer(room)
 
     async def _check_auto_pass_and_start_timer(self, room: Room):
-        """Auto-pass if current player can't afford minimum bid, then start timer."""
+        """Auto-pass bots that can't afford minimum bid; human players just get the timer."""
         if not room.turn_order or room.current_turn_index >= len(room.turn_order):
             return
         current_sid = room.turn_order[room.current_turn_index]
         player = room.players.get(current_sid)
-        if player and not player.has_passed:
+        if player and not player.has_passed and player.is_bot:
             min_bid = room.current_bid + 1000
-            # Can afford = remaining coins + already paid >= min_bid
             if (player.coins + player.current_bid) < min_bid:
-                print(f"💸 {player.nickname} can't afford minimum bid, auto-passing")
+                print(f"💸 Bot {player.nickname} can't afford minimum bid, auto-passing")
                 await self.handle_pass(current_sid)
                 if self.sio:
                     await self.broadcast_state(room.room_id, self.sio)
@@ -273,6 +305,8 @@ class GameManager:
                 print(f"Phase 1 timer error: {e}")
 
         room.turn_timer_task = asyncio.create_task(timer_expired())
+        # If current player is a bot, schedule their action
+        asyncio.create_task(self._delayed_bot_phase1_action(room))
 
     def _cancel_turn_timer(self, room: Room):
         if room.turn_timer_task:
@@ -328,9 +362,17 @@ class GameManager:
             highest = max(room.current_properties)
             room.current_properties.remove(highest)
             player.properties.append(highest)
+            paid = player.current_bid  # amount already deducted from coins
             player.current_bid = 0
-            room.last_round_winner_sid = player.sid  # track for next round start
-            print(f"🏆 {player.nickname} wins job card {highest}")
+            room.last_round_winner_sid = player.sid
+            room._round_result = {
+                'winnerId': player.sid,
+                'winnerNickname': player.nickname,
+                'wonCard': highest,
+                'paid': paid,
+                'refunded': 0,
+            }
+            print(f"🏆 {player.nickname} wins job card {highest} (paid {paid})")
 
     async def handle_pass(self, sid: str) -> Optional[str]:
         room_id = self.player_to_room.get(sid)
@@ -350,11 +392,15 @@ class GameManager:
 
         player.has_passed = True
         # Take lowest job card from table
+        acquired_card = None
         if room.current_properties:
             lowest = min(room.current_properties)
             room.current_properties.remove(lowest)
             player.properties.append(lowest)
+            acquired_card = lowest
         # Refund half of current bid (floored to 1000)
+        paid = player.current_bid
+        refund = 0
         if player.current_bid > 0:
             refund = (player.current_bid // 2 // 1000) * 1000
             player.coins += refund
@@ -362,6 +408,15 @@ class GameManager:
         else:
             print(f"🚫 {player.nickname} passed with no bid")
         player.current_bid = 0
+
+        # Record pass event for broadcast
+        room._last_pass_event = {
+            'playerId': sid,
+            'nickname': player.nickname,
+            'acquiredCard': acquired_card,
+            'paid': paid,
+            'refunded': refund,
+        }
 
         active_players = [p for p in room.players.values() if not p.has_passed]
         if len(active_players) == 1:
@@ -385,7 +440,7 @@ class GameManager:
         print(f"🏁 Phase 1 round {room.round_number} ended | Job deck remaining: {len(room.job_deck)}")
         if self.sio:
             await self.broadcast_state(room.room_id, self.sio)
-        await asyncio.sleep(2)
+        await asyncio.sleep(4)
         num_players = len(room.players)
         if len(room.job_deck) >= num_players:
             room.round_number += 1
@@ -546,6 +601,8 @@ class GameManager:
                 print(f"Phase 2 timer error: {e}")
 
         room.phase2_timer_task = asyncio.create_task(timer_expired())
+        # Schedule bot card selections for this round
+        asyncio.create_task(self._schedule_bot_phase2_actions(room))
 
     def _cancel_phase2_timer(self, room: Room):
         if room.phase2_timer_task:
@@ -685,6 +742,101 @@ class GameManager:
             del self.player_to_room[sid]
 
     # ─────────────────────────────────────────────────────────
+    # Bot logic
+    # ─────────────────────────────────────────────────────────
+
+    async def _trigger_bot_item_selections(self, room: Room):
+        """Schedule item selection for all bot players with individual delays."""
+        for sid, player in list(room.players.items()):
+            if player.is_bot and player.selected_item is None:
+                delay = random.uniform(1.0, 3.0)
+                asyncio.create_task(self._delayed_bot_item_selection(room, sid, delay))
+
+    async def _delayed_bot_item_selection(self, room: Room, bot_sid: str, delay: float):
+        """After a delay, bot randomly picks an item."""
+        await asyncio.sleep(delay)
+        if room.phase != GamePhase.ITEM_SELECTION:
+            return
+        player = room.players.get(bot_sid)
+        if not player or not player.is_bot or player.selected_item is not None:
+            return
+        item = random.choice(['reroll', 'peek', 'reverse'])
+        room_id = await self.handle_select_item(bot_sid, item)
+        if room_id and self.sio:
+            await self.broadcast_state(room_id, self.sio)
+
+    async def _delayed_bot_phase1_action(self, room: Room):
+        """If the current turn player is a bot, wait briefly then act."""
+        if not room.turn_order or room.current_turn_index >= len(room.turn_order):
+            return
+        bot_sid = room.turn_order[room.current_turn_index]
+        player = room.players.get(bot_sid)
+        if not player or not player.is_bot or player.has_passed:
+            return
+
+        delay = random.uniform(1.0, 2.5)
+        await asyncio.sleep(delay)
+
+        # Re-validate: phase and turn may have changed during sleep
+        if room.phase != GamePhase.PHASE1_BIDDING:
+            return
+        if not room.turn_order or room.turn_order[room.current_turn_index] != bot_sid:
+            return
+        player = room.players.get(bot_sid)
+        if not player or not player.is_bot or player.has_passed:
+            return
+
+        min_bid = room.current_bid + 1000
+        can_afford = (player.coins + player.current_bid) >= min_bid
+        must_bid = room.must_bid_player == bot_sid
+
+        if not can_afford:
+            return  # auto-pass will handle affordability
+
+        if not must_bid and random.random() < 0.4:
+            # Bot decides to pass
+            room_id = await self.handle_pass(bot_sid)
+            if room_id and self.sio:
+                await self.broadcast_state(room_id, self.sio)
+        else:
+            # Bot decides to bid: minimum bid + small random increment
+            max_affordable = player.coins + player.current_bid
+            extra = random.choice([0, 1000, 2000, 3000])
+            bid_amount = min(min_bid + extra, max_affordable)
+            bid_amount = (bid_amount // 1000) * 1000
+            if bid_amount < min_bid:
+                bid_amount = min_bid
+            if bid_amount > max_affordable:
+                bid_amount = (max_affordable // 1000) * 1000
+            if bid_amount < min_bid:
+                # Can't make a valid bid after rounding; pass instead
+                room_id = await self.handle_pass(bot_sid)
+            else:
+                room_id = await self.handle_bid(bot_sid, bid_amount)
+            if room_id and self.sio:
+                await self.broadcast_state(room_id, self.sio)
+
+    async def _schedule_bot_phase2_actions(self, room: Room):
+        """Schedule card selection for all bots in the current Phase 2 round."""
+        for sid, player in list(room.players.items()):
+            if player.is_bot and player.properties and player.selected_property is None:
+                delay = random.uniform(1.0, 5.0)
+                asyncio.create_task(self._delayed_bot_phase2_action(room, sid, delay))
+
+    async def _delayed_bot_phase2_action(self, room: Room, bot_sid: str, delay: float):
+        """After a delay, bot plays a random job card in Phase 2."""
+        await asyncio.sleep(delay)
+        if room.phase != GamePhase.PHASE2_PLAYING:
+            return
+        player = room.players.get(bot_sid)
+        if not player or not player.is_bot or not player.properties or player.selected_property is not None:
+            return
+        card_id = random.choice(player.properties)
+        room_id = await self.handle_play_card(bot_sid, card_id)
+        if room_id and self.sio:
+            await self.broadcast_state(room_id, self.sio)
+
+    # ─────────────────────────────────────────────────────────
     # State broadcast
     # ─────────────────────────────────────────────────────────
 
@@ -712,6 +864,14 @@ class GameManager:
         # Collect peek result and clear it
         peek_result = room._peek_result
         room._peek_result = None
+
+        # Collect pass event and clear it
+        last_pass_event = room._last_pass_event
+        room._last_pass_event = None
+
+        # Collect round result and clear it
+        round_result = room._round_result
+        room._round_result = None
 
         player_sids = list(room.players.keys())
         for viewer_sid in player_sids:
@@ -779,6 +939,10 @@ class GameManager:
                 'phase2Timeout': room.phase2_timeout,
                 # Peek (private)
                 'peekResult': viewer_peek,
+                # Last pass event (broadcast to all)
+                'lastPassEvent': last_pass_event,
+                # Round result (broadcast to all, one tick)
+                'roundResult': round_result,
                 # Final results
                 'finalRankings': final_rankings,
             }
