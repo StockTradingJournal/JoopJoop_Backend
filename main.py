@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from game_manager import GameManager
 import uvicorn
 import os
+import time
 
 # Create Socket.IO server
 sio = socketio.AsyncServer(
@@ -46,6 +47,10 @@ async def disconnect(sid):
     print(f"Client disconnected: {sid}")
     await game_manager.handle_disconnect(sid, sio)
 
+
+# ─────────────────────────────────────────────────────────
+# Room management
+# ─────────────────────────────────────────────────────────
 
 @sio.event
 async def create_room(sid, data):
@@ -102,95 +107,26 @@ async def start_game(sid, data):
         else:
             await sio.emit('room:error', {
                 'code': 'START_FAILED',
-                'message': '게임을 시작할 수 없습니다. 3명 이상 참여, 모든 일반 플레이어 준비 완료 필요'
+                'message': '게임을 시작할 수 없습니다. 2명 이상 참여, 모든 일반 플레이어 준비 완료 필요'
             }, room=sid)
     except Exception as e:
         await sio.emit('room:error', {'code': 'START_FAILED', 'message': str(e)}, room=sid)
 
 
 @sio.event
-async def place_bid(sid, data):
+async def add_bot(sid, data):
+    """Host adds a bot player to the room for solo testing."""
     try:
-        amount = data.get('amount')
-        if amount is None:
-            await sio.emit('room:error', {'code': 'INVALID_BID', 'message': 'Bid amount required'}, room=sid)
-            return
-        room_id = await game_manager.handle_bid(sid, amount)
+        room_id = await game_manager.add_bot_to_room(sid)
         if room_id:
             await game_manager.broadcast_state(room_id, sio)
+        else:
+            await sio.emit('room:error', {
+                'code': 'BOT_FAILED',
+                'message': '봇을 추가할 수 없습니다. 로비 상태에서 호스트만 추가 가능합니다.'
+            }, room=sid)
     except Exception as e:
-        await sio.emit('room:error', {'code': 'BID_FAILED', 'message': str(e)}, room=sid)
-
-
-@sio.event
-async def pass_turn(sid, data):
-    try:
-        room_id = await game_manager.handle_pass(sid)
-        if room_id:
-            await game_manager.broadcast_state(room_id, sio)
-    except Exception as e:
-        await sio.emit('room:error', {'code': 'PASS_FAILED', 'message': str(e)}, room=sid)
-
-@sio.event
-async def chat_message(sid, data):
-    try:
-        message = data.get('message')
-        if not message:
-            return
-        
-        # 플레이어가 속한 방 찾기
-        room_id = game_manager.player_to_room.get(sid)
-        if not room_id:
-            return
-        
-        # 플레이어 정보 가져오기
-        room = game_manager.rooms.get(room_id)
-        if not room:
-            return
-        
-        player = room.players.get(sid)
-        if not player:
-            return
-        
-        # 채팅 메시지를 방의 모든 플레이어에게 브로드캐스트
-        import time
-        chat_data = {
-            'playerId': sid,
-            'nickname': player.nickname,
-            'message': message,
-            'timestamp': int(time.time() * 1000)
-        }
-        
-        print(f"Broadcasting chat message from {player.nickname}: {message}")
-        await sio.emit('chat:message', chat_data, room=room_id)
-    except Exception as e:
-        print(f"Chat message error: {e}")
-        await sio.emit('room:error', {'code': 'CHAT_FAILED', 'message': str(e)}, room=sid)
-
-@sio.event
-async def leave_room(sid, data):
-    try:
-        # 소켓 룸에서 먼저 제거
-        room_id = game_manager.player_to_room.get(sid)
-        if room_id:
-            await sio.leave_room(sid, room_id)
-        
-        await game_manager.handle_disconnect(sid, sio)
-    except Exception as e:
-        await sio.emit('room:error', {'code': 'LEAVE_FAILED', 'message': str(e)}, room=sid)
-        
-@sio.event
-async def play_card(sid, data):
-    try:
-        card_id = data.get('card_id')
-        if card_id is None:
-            await sio.emit('room:error', {'code': 'INVALID_CARD', 'message': 'Card ID required'}, room=sid)
-            return
-        room_id = await game_manager.handle_play_card(sid, card_id)
-        if room_id:
-            await game_manager.broadcast_state(room_id, sio)
-    except Exception as e:
-        await sio.emit('room:error', {'code': 'PLAY_FAILED', 'message': str(e)}, room=sid)
+        await sio.emit('room:error', {'code': 'BOT_FAILED', 'message': str(e)}, room=sid)
 
 
 @sio.event
@@ -217,7 +153,6 @@ async def chat_message(sid, data):
         player = room.players.get(sid)
         if not player:
             return
-        import time
         chat_data = {
             'playerId': sid,
             'nickname': player.nickname,
@@ -227,6 +162,52 @@ async def chat_message(sid, data):
         await sio.emit('chat:message', chat_data, room=room_id)
     except Exception as e:
         print(f"Chat message error: {e}")
+
+
+# ─────────────────────────────────────────────────────────
+# Phase 1 actions
+# ─────────────────────────────────────────────────────────
+
+@sio.event
+async def place_bid(sid, data):
+    try:
+        amount = data.get('amount')
+        if amount is None:
+            await sio.emit('room:error', {'code': 'INVALID_BID', 'message': 'Bid amount required'}, room=sid)
+            return
+        room_id = await game_manager.handle_bid(sid, amount)
+        if room_id:
+            await game_manager.broadcast_state(room_id, sio)
+    except Exception as e:
+        await sio.emit('room:error', {'code': 'BID_FAILED', 'message': str(e)}, room=sid)
+
+
+@sio.event
+async def pass_turn(sid, data):
+    try:
+        room_id = await game_manager.handle_pass(sid)
+        if room_id:
+            await game_manager.broadcast_state(room_id, sio)
+    except Exception as e:
+        await sio.emit('room:error', {'code': 'PASS_FAILED', 'message': str(e)}, room=sid)
+
+
+# ─────────────────────────────────────────────────────────
+# Phase 2 actions
+# ─────────────────────────────────────────────────────────
+
+@sio.event
+async def play_card(sid, data):
+    try:
+        card_id = data.get('card_id')
+        if card_id is None:
+            await sio.emit('room:error', {'code': 'INVALID_CARD', 'message': 'Card ID required'}, room=sid)
+            return
+        room_id = await game_manager.handle_play_card(sid, card_id)
+        if room_id:
+            await game_manager.broadcast_state(room_id, sio)
+    except Exception as e:
+        await sio.emit('room:error', {'code': 'PLAY_FAILED', 'message': str(e)}, room=sid)
 
 
 # ─────────────────────────────────────────────────────────
