@@ -440,7 +440,7 @@ class GameManager:
         print(f"🏁 Phase 1 round {room.round_number} ended | Job deck remaining: {len(room.job_deck)}")
         if self.sio:
             await self.broadcast_state(room.room_id, self.sio)
-        await asyncio.sleep(4)
+        await asyncio.sleep(1)
         num_players = len(room.players)
         if len(room.job_deck) >= num_players:
             room.round_number += 1
