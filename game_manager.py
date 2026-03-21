@@ -94,12 +94,60 @@ class GameManager:
         self.rooms: Dict[str, Room] = {}
         self.player_to_room: Dict[str, str] = {}
         self.sio = None
+        # Quick match: player_count -> FIFO of (socket_id, nickname)
+        self.match_queues: Dict[int, List[tuple]] = {3: [], 4: [], 5: [], 6: []}
 
     def set_sio(self, sio):
         self.sio = sio
 
     def _generate_room_id(self) -> str:
         return ''.join(random.choices(string.ascii_uppercase + string.digits, k=6))
+
+    def _remove_from_match_queues(self, sid: str) -> None:
+        for k in self.match_queues:
+            self.match_queues[k] = [(s, n) for s, n in self.match_queues[k] if s != sid]
+
+    async def join_match_queue(self, sid: str, nickname: str, player_count: int, sio) -> bool:
+        """Queue for a quick match. When `player_count` humans are waiting, creates a room at ITEM_SELECTION."""
+        if player_count not in (3, 4, 5, 6):
+            return False
+        if self.player_to_room.get(sid):
+            return False
+        if not nickname or not str(nickname).strip():
+            return False
+        self._remove_from_match_queues(sid)
+        self.match_queues[player_count].append((sid, nickname.strip()))
+        await self._try_match(player_count, sio)
+        return True
+
+    async def leave_match_queue(self, sid: str) -> None:
+        self._remove_from_match_queues(sid)
+
+    async def _try_match(self, player_count: int, sio) -> None:
+        q = self.match_queues[player_count]
+        while len(q) >= player_count:
+            batch = q[:player_count]
+            del q[:player_count]
+            await self._create_matchmade_room(batch, sio)
+
+    async def _create_matchmade_room(self, participants: List[tuple], sio) -> None:
+        """participants: list of (sid, nickname), length == desired player_count."""
+        if not participants:
+            return
+        first_sid, first_nick = participants[0]
+        room_id = await self.create_room(first_sid, first_nick)
+        await sio.enter_room(first_sid, room_id)
+        for sid, nick in participants[1:]:
+            ok = await self.join_room(sid, room_id, nick)
+            if not ok:
+                print(f"⚠️ Matchmaking join failed for {sid} in room {room_id}")
+                continue
+            await sio.enter_room(sid, room_id)
+        room = self.rooms[room_id]
+        room.phase = GamePhase.ITEM_SELECTION
+        room.item_selection_count = 0
+        print(f"🎯 Matchmade room {room_id} -> ITEM_SELECTION ({len(room.players)} players)")
+        await self.broadcast_state(room_id, sio)
 
     # ─────────────────────────────────────────────────────────
     # Room management
@@ -179,6 +227,68 @@ class GameManager:
         print(f"🎮 Game started in room {room_id}, moving to item selection")
         # Schedule bot item selections after a short delay
         asyncio.create_task(self._trigger_bot_item_selections(room))
+        return room_id
+
+    async def return_to_lobby(self, sid: str) -> Optional[str]:
+        """After game over, reset the room to lobby so the same players can rematch."""
+        room_id = self.player_to_room.get(sid)
+        if not room_id or room_id not in self.rooms:
+            return None
+        room = self.rooms[room_id]
+
+        self._cancel_turn_timer(room)
+        self._cancel_phase2_timer(room)
+
+        if room.phase == GamePhase.LOBBY:
+            if self.sio:
+                await self.broadcast_state(room_id, self.sio)
+            return room_id
+
+        if room.phase != GamePhase.GAME_OVER:
+            return None
+
+        room.job_deck = list(range(1, 31))
+        room.real_estate_deck = list(range(1, 16))
+        random.shuffle(room.job_deck)
+        random.shuffle(room.real_estate_deck)
+
+        room.current_properties = []
+        room.current_real_estate_cards = []
+        room.current_bid = 0
+        room.current_high_bidder = None
+        room.turn_order = []
+        room.current_turn_index = 0
+        room.turn_direction = 1
+        room.round_number = 1
+        room.turn_start_time = 0.0
+        room.phase2_selections = {}
+        room.phase2_round_number = 1
+        room.phase2_start_time = 0.0
+        room.phase2_resolving = False
+        room.reverse_used_this_round = False
+        room.must_bid_player = None
+        room.item_selection_count = 0
+        room.last_round_winner_sid = None
+        room._peek_result = None
+        room._last_pass_event = None
+        room._round_result = None
+        room.turn_timer_task = None
+
+        for p in room.players.values():
+            p.ready = True if p.is_bot else False
+            p.coins = 15000
+            p.properties = []
+            p.real_estate_cards = []
+            p.current_bid = 0
+            p.has_passed = False
+            p.selected_property = None
+            p.selected_item = None
+            p.item_used = False
+
+        room.phase = GamePhase.LOBBY
+        print(f"🔙 Room {room_id} reset to lobby after game over")
+        if self.sio:
+            await self.broadcast_state(room_id, self.sio)
         return room_id
 
     # ─────────────────────────────────────────────────────────
@@ -721,6 +831,7 @@ class GameManager:
     # ─────────────────────────────────────────────────────────
 
     async def handle_disconnect(self, sid: str, sio):
+        self._remove_from_match_queues(sid)
         room_id = self.player_to_room.get(sid)
         if room_id and room_id in self.rooms:
             room = self.rooms[room_id]

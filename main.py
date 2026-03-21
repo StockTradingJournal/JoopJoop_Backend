@@ -68,6 +68,33 @@ async def create_room(sid, data):
 
 
 @sio.event
+async def join_match_queue(sid, data):
+    """Quick match: queue by desired player count (3–6). Room starts at item_selection when full."""
+    try:
+        nickname = (data or {}).get('nickname')
+        player_count = (data or {}).get('playerCount')
+        if not nickname:
+            await sio.emit('match_queue:error', {'message': '닉네임이 필요합니다.'}, room=sid)
+            return
+        if player_count not in (3, 4, 5, 6):
+            await sio.emit('match_queue:error', {'message': '인원은 3~6명만 선택할 수 있습니다.'}, room=sid)
+            return
+        ok = await game_manager.join_match_queue(sid, nickname, player_count, sio)
+        if ok:
+            await sio.emit('match_queue:joined', {'playerCount': player_count}, room=sid)
+        else:
+            await sio.emit('match_queue:error', {'message': '매칭 대기에 참여할 수 없습니다.'}, room=sid)
+    except Exception as e:
+        await sio.emit('match_queue:error', {'message': str(e)}, room=sid)
+
+
+@sio.event
+async def leave_match_queue(sid, data):
+    await game_manager.leave_match_queue(sid)
+    await sio.emit('match_queue:left', {}, room=sid)
+
+
+@sio.event
 async def join_room(sid, data):
     try:
         print(f"Client {sid}, data {data} attempting to join room")
@@ -111,6 +138,21 @@ async def start_game(sid, data):
             }, room=sid)
     except Exception as e:
         await sio.emit('room:error', {'code': 'START_FAILED', 'message': str(e)}, room=sid)
+
+
+@sio.event
+async def return_to_lobby(sid, data):
+    """Reset room from game over to lobby (same players)."""
+    try:
+        room_id = await game_manager.return_to_lobby(sid)
+        if not room_id:
+            await sio.emit(
+                'room:error',
+                {'code': 'RETURN_LOBBY_FAILED', 'message': '대기실로 돌아갈 수 없습니다. 게임 종료 후에만 가능합니다.'},
+                room=sid,
+            )
+    except Exception as e:
+        await sio.emit('room:error', {'code': 'RETURN_LOBBY_FAILED', 'message': str(e)}, room=sid)
 
 
 @sio.event
