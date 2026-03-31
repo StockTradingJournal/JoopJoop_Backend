@@ -183,6 +183,18 @@ async def leave_room(sid, data):
 
 
 @sio.event
+async def return_to_lobby(sid, data):
+    try:
+        room_id = await game_manager.handle_return_to_lobby(sid)
+        if room_id:
+            await game_manager.broadcast_state(room_id, sio)
+        else:
+            await sio.emit('room:error', {'code': 'RETURN_LOBBY_FAILED', 'message': '대기실로 돌아갈 수 없습니다.'}, room=sid)
+    except Exception as e:
+        await sio.emit('room:error', {'code': 'RETURN_LOBBY_FAILED', 'message': str(e)}, room=sid)
+
+
+@sio.event
 async def chat_message(sid, data):
     try:
         message = data.get('message')
@@ -204,6 +216,28 @@ async def chat_message(sid, data):
         await sio.emit('chat:message', chat_data, room=room_id)
     except Exception as e:
         print(f"Chat message error: {e}")
+
+
+@sio.event
+async def send_reaction(sid, data):
+    """Broadcast an emoji reaction to all players in the room."""
+    try:
+        emoji = data.get('emoji', '')
+        if not emoji:
+            return
+        room_id = game_manager.player_to_room.get(sid)
+        if not room_id or room_id not in game_manager.rooms:
+            return
+        room = game_manager.rooms[room_id]
+        player = room.players.get(sid)
+        if not player:
+            return
+        await sio.emit('player:reaction', {
+            'playerId': sid,
+            'emoji': emoji,
+        }, room=room_id, skip_sid=None)
+    except Exception as e:
+        print(f"Reaction error: {e}")
 
 
 # ─────────────────────────────────────────────────────────

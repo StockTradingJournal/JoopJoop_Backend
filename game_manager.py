@@ -852,6 +852,64 @@ class GameManager:
         if sid in self.player_to_room:
             del self.player_to_room[sid]
 
+    async def handle_return_to_lobby(self, sid: str) -> Optional[str]:
+        """Reset a game_over room back to lobby state so players can play again."""
+        room_id = self.player_to_room.get(sid)
+        if not room_id or room_id not in self.rooms:
+            return None
+        room = self.rooms[room_id]
+        if room.phase != GamePhase.GAME_OVER:
+            return None
+
+        # Cancel any lingering timers
+        if room.turn_timer_task and not room.turn_timer_task.done():
+            room.turn_timer_task.cancel()
+            room.turn_timer_task = None
+        if room.phase2_timer_task and not room.phase2_timer_task.done():
+            room.phase2_timer_task.cancel()
+            room.phase2_timer_task = None
+
+        # Reset all player state but keep them in the room
+        for player in room.players.values():
+            player.ready = False
+            player.coins = 15000
+            player.properties = []
+            player.real_estate_cards = []
+            player.current_bid = 0
+            player.has_passed = False
+            player.selected_property = None
+            player.selected_item = None
+            player.item_used = False
+
+        # Reset room state
+        room.phase = GamePhase.LOBBY
+        room.job_deck = list(range(1, 31))
+        room.real_estate_deck = list(range(1, 16))
+        random.shuffle(room.job_deck)
+        random.shuffle(room.real_estate_deck)
+        room.current_properties = []
+        room.current_real_estate_cards = []
+        room.current_bid = 0
+        room.current_high_bidder = None
+        room.turn_order = []
+        room.current_turn_index = 0
+        room.turn_direction = 1
+        room.round_number = 1
+        room.turn_start_time = 0.0
+        room.phase2_selections = {}
+        room.phase2_round_number = 1
+        room.phase2_start_time = 0.0
+        room.reverse_used_this_round = False
+        room.must_bid_player = None
+        room.item_selection_count = 0
+        room._peek_result = None
+        room._last_pass_event = None
+        room._round_result = None
+        room.last_round_winner_sid = None
+        room.phase2_resolving = False
+
+        return room_id
+
     # ─────────────────────────────────────────────────────────
     # Bot logic
     # ─────────────────────────────────────────────────────────
